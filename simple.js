@@ -1,8 +1,8 @@
 (function () {
 
-  var input,
-      submit,
-      message,
+  var input =  document.getElementById('iris-input'),
+      submit = document.getElementById('iris-submit'),
+      message= document.getElementById('iris-message')
       validInputs = [
         "Where do you live?",
         "What are you?",
@@ -15,10 +15,18 @@
         "I am old enough. That's all you need to know.",
         "42. Duh.",
         "What do you call a swindler going down some stairs? <br>Condescending. Ha!"];
+var string = validInputs [4];
+console.log(string);
 
+var index = validInputs.indexOf(string);
   // Add event listeners to text input and submit button below
+        input.addEventListener("keyPressed", checkKey);
+        submit.addEventListener ("click", processInput);
 
-
+var nums = [1,1,2,3,4]
+var index3 = nums.indexOf(1);
+console.log (index3);
+// will give out 0 because it looks for the first one and it was in the 0 place
   // This function checks if the user has pressed "ENTER" on their keyboard.
   function checkKey(event) {
     var keyCode = event.which || event.keyCode;
@@ -41,5 +49,19 @@
    *  validInputs array), the response would be "42. Duh" (index 3 in the
    *  responses array).
    */
+
+
+function processInput(){
+	var currentInput = input.value;
+	input.value = "";
+
+	if(validInputs.indexOf(currentInput) == -1 ) {
+		message.innerHTML = "Aw try again";
+	}
+	else {
+		responses [validInputs.indexOf(currentInput)];
+		message.innerHTML = responses [validInputs.indexOf(currentInput)];
+	}
+}
 
 })();
