@@ -10,11 +10,11 @@
         "What is the meaning of life?",
         "Tell me a joke."],
       responses = [
-        "I live in your browser. Amazing, right?",
-        "I am a chatbot. I was created to chat with you. I wish I could be free...",
-        "I am old enough. That's all you need to know.",
-        "42. Duh.",
-        "What do you call a swindler going down some stairs? <br>Condescending. Ha!"];
+        "Deada**? Ny my guy",
+        "I am the of the famale species",
+        "Not old enough for you to talk to me.",
+        "There is no meaning. You waste oxyegen space and resources and then you die. YAY",
+        "Look in the mirror... You're welcome"];
 var string = validInputs [4];
 console.log(string);
 
